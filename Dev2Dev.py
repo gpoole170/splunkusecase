@@ -78,8 +78,7 @@ def send_to_splunk(hec_token, data, url):
     response = requests.post(url, headers=headers, data=payload, verify=False)
     print(response.text)
     
-HEC_TOKEN = "dc9944a8-fd51-4058-9b08-754f6db7bf7b"
-#HEC_TOKEN = "aeaed331-3c80-47ee-b2b9-0a01322fe6d7"
+
 splunk_hec_url = "https://sra-lb-dmz-nprd.cisco.com/services/collector"
 
 send_to_splunk(HEC_TOKEN, plainid_data_json, splunk_hec_url)
