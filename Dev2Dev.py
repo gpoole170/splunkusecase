@@ -52,8 +52,8 @@ def get_audit_admin_logs(envId, timestamp, resource_type,limit,offset):
 
 
 
-#envId = "13397a05-a1d1-48f8-8367-42cc60311be1"
-envId = "5e648a8c-11c6-4a3f-9342-184300a71930"
+envId = "13397a05-a1d1-48f8-8367-42cc60311be1"
+#envId = "5e648a8c-11c6-4a3f-9342-184300a71930"
 
 timestamp = "1717207543000"
 resource_type = "ROLE"
@@ -78,8 +78,8 @@ def send_to_splunk(hec_token, data, url):
     response = requests.post(url, headers=headers, data=payload, verify=False)
     print(response.text)
     
-#HEC_TOKEN = "dc9944a8-fd51-4058-9b08-754f6db7bf7b"
-HEC_TOKEN = "aeaed331-3c80-47ee-b2b9-0a01322fe6d7"
+HEC_TOKEN = "dc9944a8-fd51-4058-9b08-754f6db7bf7b"
+#HEC_TOKEN = "aeaed331-3c80-47ee-b2b9-0a01322fe6d7"
 splunk_hec_url = "https://sra-lb-dmz-nprd.cisco.com/services/collector"
 
 send_to_splunk(HEC_TOKEN, plainid_data_json, splunk_hec_url)
